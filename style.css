@@ -1,0 +1,209 @@
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+      --light-grey: #dce4e3;
+    --text-color: #084236;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar fechado */
+
+.closeSidebar {
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--green);
+    overflow: hidden;
+    position: relative;
+}
+
+.closeSidebar nav {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    width: 80px;
+    padding: 12px;
+}
+
+.closeSidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80px;
+    list-style: none;
+}
+
+
+.closeSidebar ul li img:hover {
+    background-color: var(--light-green);
+    border-radius: 12px;
+}
+
+
+.closeSidebar nav a {
+    display: flex;
+    gap: 46px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+    
+}
+
+.closeSidebar nav img {
+    padding: 14px 14px;
+}
+
+.closeActive img{
+    background-color: var(--light-grey);
+    border-radius: 12px;  
+    margin-top: 10px;
+}
+
+#logo {
+    width: 0;
+}
+
+#openBtn {
+    position: absolute;
+    top: 01px;
+    border: none;
+    background-color: var(--green);
+}
+
+#userImage {
+    width: 0;
+}
+
+#logOutBtn {
+    margin-left: 14px;
+}
+
+.logOut {
+   display: none;
+}
+
+/* Sidebar Aberto */
+
+.openSidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;
+    background-color: var(--green);
+}
+
+.openSidebar nav{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+}
+
+.openSidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 06px;
+}
+
+.openSidebar ul li{
+    list-style: none;    
+}
+
+.openSidebar ul li:hover:not(:has(#logo)) {
+    background-color: var(--light-green);
+    border-radius: 12px;
+    height: 50px;
+}
+
+#logo {
+    gap: 106px;
+}
+
+.openSidebar button {
+    background-color: var(--green);
+    border: none;
+    padding: 14px;
+}
+
+.openSidebar button:hover {
+    background-color: var(--light-green);
+    border-radius: 12px;
+}
+
+.openSidebar nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 14px 14px;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    gap: 14px;
+    text-transform: capitalize;
+}
+
+.active{
+    background-color: var(--light-grey);
+    height: 50px;   
+}
+
+.user {
+    display: flex;
+    background-color: var(--light-green);
+
+    padding: 14px 8px;
+    width: 260px;
+    margin-top: 102px;
+}
+
+#PhotoProfile {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user div{
+    margin-right: 40px;
+}
+
+.user p {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.user span {
+    color: var(--text-color);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.page {
+    background-color: var(--light-grey);
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: 500;
+}
